@@ -93,11 +93,12 @@ function tris_payment_admin_settings_page()
     }
     echo '<div class="wrap"><h2>Ustawienia Płatności TRIS</h2>';
     echo '<div style="font-size:14px; line-height:1.8">';
-    echo '<b>INFORMACJE:</b> <br/><br/>';
+    echo '<br/><b>INFORMACJE:</b> <br/>';
     echo '1) Wypełnij poniższe pola uzupełniając je danymi z twojego konta tPay<br/>';
     echo '2) Aby dodać formularz użyj shortcode <b>[payment_form]</b><br/>';
     echo '3) Strona DZ powinna być na adresie <a target="_blank" href="' . get_option('siteurl') . '/dziekujemy_za_wplate">' . get_option('siteurl') . '/<b style="color:red">dziekujemy_za_wplate</b></a> (<- kliknij i sprawdź)<br/>';
-    echo '4) Zbieraj wpłaty sprawdzaj je na stronie ustawień <b><a href="' . get_option('siteurl') . '/wp-admin/admin.php?page=tris_payment"> "Płatności TRIS" </a></b> i ciesz się życiem!';
+    echo '4) Aby użyć innego niż domyśny numer kampanii należy linkować do strony w następujący sposób: <a target="_blank" href="' . get_option('siteurl') . '/jakas_strona_z formularzem/?caID=0123453">'  . get_option('siteurl') . '/jakas_strona_z_formem/<b style="color:red">?caID=0123456</b></a><br/>';
+    echo '5) Zbieraj wpłaty sprawdzaj je na stronie ustawień <b><a href="' . get_option('siteurl') . '/wp-admin/admin.php?page=tris_payment"> "Płatności TRIS" </a></b> i ciesz się życiem!';
     echo '</div>';
     echo '<br/><br/>';
     echo '<form method="post">';
