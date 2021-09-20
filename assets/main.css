@@ -1,0 +1,125 @@
+input#dp_def_amount,
+input#dp_other_amount {
+    border: none;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px;
+    width: 24%;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.3s;
+}
+
+.amountChoose,
+input#dp_other_amount {
+    color: #004E84;
+}
+
+input#dp_kwota {
+    border: none;
+    border-radius: 0px;
+    font-size: 1.2em;
+    background: #f8f6fb99;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: #2a1f59 0px 0px 1px;
+}
+
+input#dp_kwota::placeholder,
+input#dp_kwota::-moz-placeholder,
+input#dp_kwota::-webkit-input-placeholder {
+    text-shadow: none;
+}
+
+button#dp_buttomDarowizna {
+    font-size: 1.3em;
+    background: #ae3131;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    color: #f3f0ed;
+    letter-spacing: 0.1em;
+}
+
+table.tbl_center {
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+table.tbl_center * {
+    border: none;
+}
+
+.amountChoose.active,
+input#dp_other_amount.active {
+    color: #ffffff;
+    background: #ae3131;
+}
+
+#formularz .form-item,
+#formularz .form-item input[type="text"],
+#formularz .form-item input[type="email"] {
+    width: 100%;
+    margin: 15px auto;
+}
+
+.btn.focus,
+.btn:focus,
+.btn:hover {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.formBox {
+    margin: 15px auto;
+    background: #004E84;
+    padding: 30px;
+    color: #ffffff;
+    clear: both;
+}
+
+.col-centered {
+    float: none;
+    clear: both;
+    margin: auto;
+}
+
+#dp_other_amount_txt span {
+    color: #ae3131;
+    font-weight: bold;
+}
+
+.payform-label-check {
+    font-size: 0.8em;
+}
+
+.formBox #formularz .submitButton {
+    color: #ffffff;
+    background: #ae3131;
+    transition: all 0.3s ease-in;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+}
+
+.formBox #formularz .submitButton:hover {
+    transform: scale(1.05);
+    color: #1a5580;
+    background: #d41717;
+}
+
+@media (max-width: 768px) {
+    input#dp_def_amount,
+    input#dp_other_amount {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+}

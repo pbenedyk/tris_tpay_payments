@@ -1,0 +1,20 @@
+li#toplevel_page_tris_payment a .wp-menu-name,
+li#toplevel_page_tris_payment a .wp-menu-image {
+    color: gold;
+    font-weight: bold;
+    background: #716c51
+}
+
+.toplevel_page_tris_payment th {
+    font-weight: bold;
+}
+
+.toplevel_page_tris_payment thead,
+.toplevel_page_tris_payment tfoot {
+    background: #ffeb81
+}
+
+.tableInfo {
+    font-size: 10px;
+    font-weight: 400;
+}
