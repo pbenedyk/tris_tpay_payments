@@ -6,6 +6,7 @@ function render_payment_form()
 {
   wp_enqueue_script('tris_js_script');
   wp_enqueue_style('tris_payments_style');
+  wp_enqueue_script('tris_validator');
   if(isset($_GET['caID'])){
     $camp_id = $_GET['caID'];
   }else{

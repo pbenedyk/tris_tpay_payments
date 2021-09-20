@@ -11,6 +11,15 @@ function tris_scripts()
         false
     );
 
+    wp_register_script(
+        'tris_validator',
+        'https://validator.piotrskarga.pl/ajax.js',
+        array('jquery'),
+        false,
+        false
+    );
+
+
     wp_register_style(
         'tris_payments_style',
         plugins_url() . '/tris_payments/assets/main.css'

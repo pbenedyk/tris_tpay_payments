@@ -124,6 +124,14 @@ input#dp_other_amount.active {
     background: #000;
 }
 
+#emptyError,
+.validError {
+    background: #ffd198;
+    color: #ff2311;
+    border: 2px solid #fff;
+    padding: 3px 10px;
+}
+
 @media (max-width: 768px) {
     input#dp_def_amount,
     input#dp_other_amount {
