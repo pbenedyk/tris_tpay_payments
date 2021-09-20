@@ -4,8 +4,8 @@ add_shortcode('payment_form', 'render_payment_form');
 
 function render_payment_form()
 {
-  wp_enqueue_script('mainjs');
-  wp_enqueue_style('tris_payment_style');
+  wp_enqueue_script('tris_js_script');
+  wp_enqueue_style('tris_payments_style');
   if(isset($_GET['caID'])){
     $camp_id = $_GET['caID'];
   }else{
@@ -23,7 +23,7 @@ function render_payment_form()
           <input class="amountChoose" type="button" id="dp_other_amount" value="Inna kwota">
           <br/>
       <div class="amountContainer" style="width:100%; margin:30px auto; text-align:center ">
-          <span id="dp_other_amount_txt"><span style="color:brown">Wprowadź kwotę</span></span>:
+          <span id="dp_other_amount_txt"><span style="color:#fff">Wpisz tu kwotę</span></span>:
           <input type="text" name="amount" id="dp_kwota" 
           pattern="^([1-9])((\.\d{1,2})?)$|^((?!0)(\d){1,5})((\.\d{1,2})?)$|^(1(\d{5})(.\d{1,2})?)$|^(200000(.[0]{1,2})?)$" 
           placeholder="np. 100" maxlength="9" size="9" title="Kwota powinna zawierać się w przedziale 1 - 200000 PLN. Dozwolony format to np: 100 lub 152.43" 

@@ -4,7 +4,7 @@ add_action("wp_enqueue_scripts", "tris_scripts");
 function tris_scripts()
 {
     wp_register_script(
-        'mainjs',
+        'tris_js_script',
         plugins_url() . '/tris_payments/assets/main.js',
         array('jquery'),
         false,

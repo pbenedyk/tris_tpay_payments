@@ -1,9 +1,10 @@
 jQuery(function($) {
     $('#formularz').on('submit', function(e) {
         if ($("#md5sum").val() == "" || $("#crc").val() == "" || $('.validError').length > 0) {
+            $('#emptyError').remove();
             e.preventDefault();
             if ($('#dp_kwota').val().length == 0) {
-                $('.amountContainer').append('<div><b>Wprowadź lub wybierz kwotę</b></div>');
+                $('.amountContainer').append('<div id="emptyError"><b>Wprowadź lub wybierz kwotę</b></div>');
                 return false;
             }
             $.ajax({
@@ -32,20 +33,21 @@ jQuery(function($) {
 
 
     $('.amountChoose').on('click', function() {
+        $('#emptyError').remove();
         $('.amountChoose').not($(this)).removeClass('active');
         $('#dp_other_amount').removeClass('active');
         $(this).addClass('active');
         $('#dp_kwota').val($(this).data('amount'));
         $('#dp_kwota').prop('readonly', true);
-        $('#dp_kwota').attr('style', 'color:#2a1f59');
         $('#dp_other_amount_txt').html('Wybrana Kwota')
     });
     $('#dp_other_amount').on('click', function() {
+        $('#emptyError').remove();
         $('.amountChoose').not($(this)).removeClass('active');
         $(this).addClass('active');
         $('#dp_kwota').prop('readonly', false);
-        $('#dp_kwota').attr('style', 'color:brown');
-        $('#dp_other_amount_txt').html('<span style=\'color:brown\'>Wprowadź kwotę</span>')
+        $('#dp_kwota').focus();
+        $('#dp_other_amount_txt').html('<span>Wpisz tu kwotę</span>')
     });
 
     $('.tbl_center #dp_kwota').on('input', function() {
