@@ -1,6 +1,5 @@
 jQuery(function($) {
     $('#formularz').on('submit', function(e) {
-        alert('!');
         if ($("#md5sum").val() == "" || $("#crc").val() == "" || $('.validError').length > 0) {
             e.preventDefault();
             if ($('#dp_kwota').val().length == 0) {
@@ -18,7 +17,8 @@ jQuery(function($) {
                     var obj = JSON.parse(responseData);
                     $("#md5sum").val(obj.md5);
                     $("#crc").val(obj.crc);
-                    $('#URL_back').val(window.location.origin + '/dziekujemy_za_wplate/?ido=' + obj.control + '&status=OK');
+                    $('#URL_back').val(window.location.origin + '/dziekujemy_za_wplate/?ido=' + obj.crc);
+                    $('#full_name').val($('input#firstname').val() + ' ' + $('input#lastname').val());
                     $('#_wpnonce').remove();
                     $('input[name="_wp_http_referer"]').remove();
                     if (obj.md5) {

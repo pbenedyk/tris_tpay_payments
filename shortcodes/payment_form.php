@@ -38,6 +38,7 @@ function render_payment_form()
       <input type="hidden" id="md5sum" name="md5sum" value=""/>
       <input type="hidden" name="description" value="Wsparcie ze strony "/>
       <input id="crc" type="hidden" name="crc" value=""/>
+      <input type="hidden" id="fullname" name="name" value=""/>
       <div class="form-item"> 
         <input required type="text" class="form-control" data-type="name" name="firstname" id="name" placeholder="Imię">
       </div>

@@ -102,7 +102,6 @@ function tris_payment_admin_settings_page()
     echo '</div>';
     echo '<br/><br/>';
     echo '<form method="post">';
-
     echo '<b>Domyślna kampania: </b><br/><input type="text" name="default_camp_id" value="' . get_option('default_camp_id', '') . '"/><br/><br/>';
     echo '<b>tPay ID: </b><br/><input type="text" name="tpay_id" value="' . get_option('tpay_id', '') . '"/><br/><br/>';
     echo '<b>tPay PIN: </b><br/><input type="password" name="tpay_pin" value="' . get_option('tpay_pin', '') . '"/><br/><br/>';
