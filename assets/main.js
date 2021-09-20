@@ -18,7 +18,7 @@ jQuery(function($) {
                     $("#md5sum").val(obj.md5);
                     $("#crc").val(obj.crc);
                     $('#URL_back').val(window.location.origin + '/dziekujemy_za_wplate/?ido=' + obj.crc);
-                    $('#full_name').val($('input#firstname').val() + ' ' + $('input#lastname').val());
+                    $('#fullname').val($('input#name').val() + ' ' + $('input#lastname').val());
                     $('#_wpnonce').remove();
                     $('input[name="_wp_http_referer"]').remove();
                     if (obj.md5) {
